@@ -1,3 +1,7 @@
+//INFO6205 Spring2022
+//Name:YujieZhang
+//NUID:002952029
+
 import java.util.*;
 
 public class Assignment1 {
