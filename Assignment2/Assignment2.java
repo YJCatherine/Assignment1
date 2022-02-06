@@ -1,5 +1,5 @@
 //INFO6205 Spring2022
-//Name:YujieZhang
+//Name:Yujie Zhang
 //NUID:002952029
 
 import java.util.*;
