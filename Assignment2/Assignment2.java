@@ -154,34 +154,34 @@ public class Assignment2 {
 
     // 57.Insert Interval
     public int[][] insert(int[][] intervals, int[] newInterval) {
-        List<int[]> list = new ArrayList<>();
+		List<int[]> list = new ArrayList<>();
         int i = 0;
-        while (i < intervals.length && intervals[i][1] < newInterval[0]){
-            list.add(new int[]{intervals[i][0], intervals[i][1]});
-            i++;
-        }
+		while (i < intervals.length && intervals[i][1] < newInterval[0]){
+			list.add(new int[]{intervals[i][0], intervals[i][1]});
+			i++;
+		}
 
-        while (i < intervals.length && intervals[i][0] <= newInterval[1]){
-            newInterval[0] = Math.min(intervals[i][0], newInterval[0]);
-            newInterval[1] = Math.max(intervals[i][1], newInterval[1]);
-            i++;
-        }
-        list.add(new int[]{newInterval[0], newInterval[1]});
+		while (i < intervals.length && intervals[i][0] <= newInterval[1]){
+			newInterval[0] = Math.min(intervals[i][0], newInterval[0]);
+			newInterval[1] = Math.max(intervals[i][1], newInterval[1]);
+			i++;
+		}
+		list.add(new int[]{newInterval[0], newInterval[1]});
 
-        while (i < intervals.length){
-            list.add(new int[]{intervals[i][0], intervals[i][1]});
-            i++;
-        }
+		while (i < intervals.length){
+			list.add(new int[]{intervals[i][0], intervals[i][1]});
+			i++;
+		}
 
-        int[][] result = new int[list.size()][2];
-        for (i = 0; i < list.size(); i++){
-            result[i][0] = list.get(i)[0];
-            result[i][1] = list.get(i)[1];
-        }
+		int[][] result = new int[list.size()][2];
+		for (i = 0; i < list.size(); i++){
+			result[i][0] = list.get(i)[0];
+			result[i][1] = list.get(i)[1];
+		}
 
-        return result;
+		return result;
     }
-
+    
     // 435. Non-overlapping Intervals
     public int eraseOverlapIntervals(int[][] intervals) {
         Arrays.sort(intervals,(o1, o2) -> (o1[0] - o2[0]));
