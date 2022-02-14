@@ -18,10 +18,10 @@ public class Q4 {
     }
 
     private ListNode recurMerge(ListNode node, int recurTimes, boolean cardinal) {
-        if (recurTimes == 0) { // 找到链表中点
+        if (recurTimes == 0) { 
             ListNode curr = cardinal ? node.next : node;
             if (cardinal) {
-                node.next = null; // 去掉链表中点的next指向（链表长度为基数）
+                node.next = null; 
             }
             return curr;
         }
@@ -30,7 +30,7 @@ public class Q4 {
         ListNode result = this.recurMerge(nextNode, recurTimes - 1, cardinal);
 
         if (nextNode == result) {
-            node.next = null; // 去掉链表中点的next指向（链表长度为偶数）
+            node.next = null; 
         }
 
         ListNode originNext = node.next;
