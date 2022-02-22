@@ -1,6 +1,8 @@
 package Assignment4;
 
-* public class ListNode {
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
  *     int val;
  *     ListNode next;
  *     ListNode() {}
