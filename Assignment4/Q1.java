@@ -11,28 +11,21 @@ package Assignment4;
  * }
  */
 class Q1 {
-    public ListNode mergeInBetween(ListNode l1, int a, int b, ListNode l2) {
-
-        // p points to ath-1 element of list 1 (l1)
-        // q points to bth+1 element of list 1 (l1)
-        // r points to last element of list 2 (l2)
-
-        ListNode p = l1;
-
-        for(int i=0; i<a-1; i++)
-            p = p.next;
-
-        ListNode q = p;
-        for(int i=a; i<=b+1; i++)
-            q = q.next;
-
-        ListNode r = l2;
-        while(r.next != null)
-            r = r.next;
-
-        p.next = l2;
-        r.next = q;
-
-        return l1;
+    public ListNode mergeInBetween(ListNode list1, int a, int b, ListNode list2) {
+        ListNode begin = list1;
+        ListNode end = list1;
+        ListNode cur= list2;
+        for(int i=0;i<a-1;i++){
+            begin=begin.next;
+        }
+        for(int j=0;j<b+1;j++){
+            end=end.next;
+        }
+        begin.next=list2;
+        while(cur.next!=null){
+            cur=cur.next;
+        }
+        cur.next=end;
+        return list1;
     }
 }
