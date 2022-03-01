@@ -18,7 +18,7 @@ import java.util.*;
  *     }
  * }
  */
-class Assignment {
+class Assignment5 {
 
     //107. Binary Tree Level Order Traversal II
     public List<List<Integer>> list=new ArrayList<>();
