@@ -52,7 +52,7 @@ public class Final {
     }
 
     public static void dfs(char[][] grid, int row, int col, int i, int j){
-        if (i < 0 || i > row || j < 0 || j > row ||grid[i][j] == '0'){
+        if (i < 0 || i > row || j < 0 || j > col ||grid[i][j] == '0'){
             return;
         }
 
